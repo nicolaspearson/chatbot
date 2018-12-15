@@ -1,0 +1,20 @@
+version: '3.5'
+
+networks:
+  react-front-tier:
+    name: react-chatbot-net
+
+services:
+  react-chatbot:
+    hostname: localhost
+    image: react-chatbot:1.0
+    build:
+      context: .
+    container_name: react-chatbot
+    expose:
+      - 80
+    ports:
+      - 8080:80
+    restart: always
+    networks:
+      - react-front-tier
