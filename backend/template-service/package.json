@@ -1,0 +1,67 @@
+{
+	"name": "node.template.service",
+	"version": "0.0.1",
+	"description": "Template Service",
+	"main": "dist",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nicolaspearson/chatbot.git"
+	},
+	"license": "GPL-3.0+",
+	"scripts": {
+		"start": "npm run build && npm run watch",
+		"start:debug": "ts-node --inspect=5858 --debug-brk --ignore false ./src/index.ts",
+		"build": "rm -rf ./dist && npm run build:ts && npm run tslint && npm run copy:env && npm run copy:proto",
+		"build:ts": "tsc --rootDir ./src/ --allowJs",
+		"debug": "npm run build && npm run watch:debug",
+		"serve": "nodemon dist/index.js",
+		"serve:debug": "nodemon --inspect=5858 --debug-brk --ignore false dist/index.js",
+		"watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch:ts\" \"npm run serve\"",
+		"watch:debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch:ts\" \"npm run serve:debug\"",
+		"watch:ts": "tsc -w",
+		"tslint": "tslint --fix -c tslint.json -p tsconfig.json",
+		"clean": "rm -rf node_modules && npm install",
+		"copy:env": "cp ./src/env/*.json ./dist/env/",
+		"copy:proto": "cp -r ./src/proto ./dist/"
+	},
+	"dependencies": {
+		"@grpc/proto-loader": "~0.3.0",
+		"class-validator": "~0.9.1",
+		"google-protobuf": "~3.6.1",
+		"grpc": "~1.17.0-pre1",
+		"grpc-boom": "1.0.11",
+		"grpc-ts-health-check": "~1.0.6",
+		"module-alias": "~2.1.0",
+		"nconf": "~0.10.0",
+		"pg": "~7.7.1",
+		"reflect-metadata": "~0.1.12",
+		"typeorm": "~0.2.9",
+		"grpc-typeorm-infrastructure": "~1.0.1",
+		"winston": "~3.1.0"
+	},
+	"devDependencies": {
+		"@types/google-protobuf": "^3.2.7",
+		"@types/nconf": "~0.0.37",
+		"@types/node": "~10.12.12",
+		"concurrently": "~4.1.0",
+		"dotenv": "~6.2.0",
+		"nodemon": "~1.18.8",
+		"ts-node": "~7.0.1",
+		"tslint": "~5.11.0",
+		"typescript": "~3.2.2"
+	},
+	"nodemonConfig": {
+		"delay": "2500"
+	},
+	"_moduleAliases": {
+		"@actions": "dist/actions/index",
+		"@db": "dist/db",
+		"@env": "dist/env/index",
+		"@logger": "dist/logger",
+		"@models": "dist/models",
+		"@proto": "dist/proto",
+		"@repositories": "dist/repositories",
+		"@services": "dist/services",
+		"@utils": "dist/utils"
+	}
+}

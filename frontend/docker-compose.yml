@@ -1,8 +1,8 @@
 version: '3.5'
 
 networks:
-  react-front-tier:
-    name: react-chatbot-net
+  chatbot-front-tier:
+    name: ft-chatbot-net
 
 services:
   react-chatbot:
@@ -17,4 +17,4 @@ services:
       - 8080:80
     restart: always
     networks:
-      - react-front-tier
+      - chatbot-front-tier

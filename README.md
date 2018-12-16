@@ -6,16 +6,16 @@
 
 ---
 
-A chatbot app that provides bi-directional chat functionality. The backend uses NodeJS to serve a gRPC API. The frontend uses ReactJS and Ant Design. The frontend and backend have both been written in Typescript.
+A chatbot app that provides bi-directional chat functionality. The backend uses NodeJS to serve a gRPC API. The frontend uses ReactJS and Ant Design. The frontend and backend have both been written using Typescript.
 
 The reason for this project is simply to experiment with building distributed applications using bleeding-edge technology.
 
 ## Getting started
 
-- Install VS Code
-- Install Node, e.g. `brew install node`
 - Clone the repository
+- Download and install [VS Code](https://code.visualstudio.com/)
 - Install Docker
+- Install Node, e.g. `brew install node`
 
 ## Docker
 
@@ -25,7 +25,7 @@ TODO: Host docker images on docker-hub.
 
 ## Frontend
 
-The frontend was built using ReactJS. See the `README` in the frontend directory.
+The frontend was built using ReactJS. See the `README` in the frontend directory for further details.
 
 ### Running the project
 
@@ -34,3 +34,7 @@ The frontend was built using ReactJS. See the `README` in the frontend directory
 3. `npm build` to compile the source code into the build dir, i.e. to create a production build.
 4. `npm start` to run the application in dev mode.
 5. `npm run prettier` to prettify the code.
+
+## Backend
+
+The backend was built using NodeJS. See the `README` in the backend directory for further details.

@@ -1,0 +1,59 @@
+version: '3.5'
+
+networks:
+  chatbot-back-tier:
+    driver: bridge
+    name: bt-chatbot-net
+
+services:
+  envoy:
+    image: envoy-chatbot:1.0
+    build:
+      context: './envoy'
+    container_name: chatbot-envoy
+    command: usr/local/bin/envoy -c /etc/envoy/envoy.yaml -l info --log-path /tmp/envoy_info.log
+    expose:
+      - 8080
+      - 9901
+    ports:
+      - 8080:8080
+      - 9901:9901
+    networks:
+      - chatbot-back-tier
+
+  postgres-chatbot:
+    hostname: postgres-chatbot
+    image: postgres:11
+    container_name: chatbot-postgres
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    volumes:
+      - ./chatbot-db/db-scripts:/docker-entrypoint-initdb.d
+      - ./chatbot-db/db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=chatbot
+      - POSTGRES_USER=master
+      - POSTGRES_PASSWORD=masterkey
+    networks:
+      - chatbot-back-tier
+
+  auth-service:
+    image: auth-service-chatbot:1.0
+    build:
+      context: './auth-service'
+    links:
+      - postgres-chatbot
+    restart: always
+    container_name: chatbot-auth-service
+    expose:
+      - 9090
+    environment:
+      - NODE_ENV=staging
+      - DB_HOST=postgres-chatbot
+      - GRPC_LOG_LEVEL=DEBUG
+      - GRPC_HOST=0.0.0.0
+      - GRPC_PORT=9090
+    networks:
+      - chatbot-back-tier

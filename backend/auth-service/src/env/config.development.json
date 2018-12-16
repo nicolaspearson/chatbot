@@ -1,0 +1,16 @@
+{
+	"ACCESS_TOKEN": "secret",
+	"DB_HOST": "localhost",
+	"DB_PORT": 5432,
+	"DB_NAME": "chatbot",
+	"DB_LOGGING": "all",
+	"DB_CONNECTION_NAME": "default",
+	"DB_SCHEMA": "auth",
+	"DB_PASSWORD": "masterkey",
+	"DB_USERNAME": "master",
+	"GRPC_LOG_LEVEL": "DEBUG",
+	"GRPC_HOST": "localhost",
+	"GRPC_PORT": "9090",
+	"JWT_SECRET": "AdXshzL8o28ucqeeJyFf6wN6ztJYhwWWYyrEyP/E/IWVm3MPl4gVqAq4hJnousKiByQXjYj24sf4a4dUvxpL0chktL1r5F5ryhxfzlQagvnx3Wt9j3cnuSh7WJgjPJLlP0zRKywVt2igNQLPJmd69lYl9N2aiQUmWl849OKKwxmOTIE7ohr621sOFKLcbHvSa5PkGNU6TL2oU1IEhPAYEOiRIKoObARZZCmfymPpRaaE0za8gxQV6KLba2ajN6y7O2dv+Syj61LHKwFG76g0NOIseP+6J/CYqCuB5E8FxGyCqMEefs9ReLgpP3FlqZmS3WUI3HXNG4mivU9JOB3AHA==",
+	"JWT_EXPIRATION": "1d"
+}

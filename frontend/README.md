@@ -1,4 +1,4 @@
-# React Chatbot
+# Chatbot Frontend
 
 React Chatbot built using Typescript, MobX, Ant Design, and FuseBox.
 

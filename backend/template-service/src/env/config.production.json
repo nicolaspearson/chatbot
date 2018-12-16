@@ -1,0 +1,13 @@
+{
+	"DB_HOST": "localhost",
+	"DB_PORT": 5432,
+	"DB_NAME": "chatbot",
+	"DB_LOGGING": false,
+	"DB_CONNECTION_NAME": "default",
+	"DB_SCHEMA": "template",
+	"DB_PASSWORD": "masterkey",
+	"DB_USERNAME": "master",
+	"GRPC_LOG_LEVEL": "DEBUG",
+	"GRPC_HOST": "localhost",
+	"GRPC_PORT": "9090"
+}
