@@ -115,5 +115,5 @@ $ client.echo({ "message": "Hi there!" }, printReply)
 **Login:**
 
 ```bash
-$ client.login({ "username": "guest", "password": "ulan" }, createMetadata({ "x-access-token": "secret"}), printReply)
+$ client.login({ "username": "guest", "password": "guest" }, createMetadata({ "x-access-token": "secret"}), printReply)
 ```
