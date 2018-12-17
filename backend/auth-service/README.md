@@ -2,6 +2,16 @@
 
 The Auth Service is responsible for authorizing users and validating JWT tokens.
 
+### Running the project
+
+1.  `npm install`
+2.  `npm build` to compile the source code into the build dir, i.e. to create a production build.
+3.  `npm start` to run the application in dev mode.
+
+### Docker
+
+This project includes a multi-stage Dockerfile, to build an image you can execute: `docker build . --tag auth-service-chatbot:1.0`
+
 ### Overview
 
 - **actions** - API actions.

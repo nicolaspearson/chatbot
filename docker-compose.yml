@@ -30,8 +30,8 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ./chatbot-db/db-scripts:/docker-entrypoint-initdb.d
-      - ./chatbot-db/db-data:/var/lib/postgresql/data
+      - ./backend/chatbot-db/db-scripts:/docker-entrypoint-initdb.d
+      - ./backend/chatbot-db/db-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=chatbot
       - POSTGRES_USER=master
@@ -42,7 +42,7 @@ services:
   auth-service:
     image: auth-service-chatbot:1.0
     build:
-      context: './auth-service'
+      context: './backend/auth-service'
     links:
       - postgres-chatbot
     restart: always

@@ -2,6 +2,16 @@
 
 This is a template for creating new services. Simply copy and paste the root directory, rename the folder, and customise as required.
 
+### Running the project
+
+1.  `npm install`
+2.  `npm build` to compile the source code into the build dir, i.e. to create a production build.
+3.  `npm start` to run the application in dev mode.
+
+### Docker
+
+This project includes a multi-stage Dockerfile, to build an image you can execute: `docker build . --tag template-service-chatbot:1.0`
+
 ### Overview
 
 - **actions** - API actions.
