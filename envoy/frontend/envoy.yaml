@@ -1,0 +1,34 @@
+admin:
+  access_log_path: /tmp/admin_access.log
+  address:
+    socket_address: { address: 0.0.0.0, port_value: 9902 }
+
+static_resources:
+  listeners:
+    - name: listener_frontend
+      address:
+        socket_address: { address: 0.0.0.0, port_value: 8080 }
+      filter_chains:
+        - filters:
+            - name: envoy.http_connection_manager
+              config:
+                codec_type: auto
+                stat_prefix: ingress_http
+                route_config:
+                  name: frontend_route
+                  virtual_hosts:
+                    - name: frontend
+                      domains: ['*']
+                      routes:
+                        - match: { prefix: '/' }
+                          route:
+                            cluster: react_chatbot
+                http_filters:
+                  - name: envoy.cors
+                  - name: envoy.router
+  clusters:
+    - name: react_chatbot
+      connect_timeout: 25s
+      type: strict_dns
+      lb_policy: round_robin
+      hosts: [{ socket_address: { address: react-chatbot, port_value: 80 } }]
