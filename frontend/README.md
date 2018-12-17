@@ -27,6 +27,7 @@ The `src` directory layout can be seen below:
 
 ```
 src
+├── api
 ├── assets
 │   └── images
 │       ├── png
@@ -39,11 +40,9 @@ src
 │   │   ├── HtmlHead
 │   │   └── RouterLink
 │   ├── icon
-│   │   ├── AntDesign
+│   │   ├── Chatbot
 │   │   ├── Hamburger
-│   │   ├── Logo
-│   │   ├── Plus
-│   │   └── ReactOfficial
+│   │   └── Logo
 │   ├── structural
 │   │   ├── DashboardPage
 │   │   ├── Footer
@@ -54,7 +53,6 @@ src
 │   │   ├── Page
 │   │   └── SiteNav
 │   └── ui
-│       ├── NumberCard
 │       ├── Palette
 │       └── RoundButton
 ├── containers
@@ -65,15 +63,14 @@ src
 ├── models
 ├── pages
 │   ├── Dashboard
-│   │   ├── Calendar
-│   │   ├── Overview
-│   │   └── Theme
+│   │   ├── Chat
+│   │   └── Profile
 │   ├── Landing
 │   ├── Login
 │   └── SignUp
+├── proto
 ├── router
 ├── store
-│   └── api
 ├── theme
 │   └── styles
 │       ├── ant

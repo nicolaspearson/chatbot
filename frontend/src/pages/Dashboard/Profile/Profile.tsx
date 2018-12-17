@@ -1,13 +1,11 @@
+import { Card } from 'antd';
 import * as React from 'react';
 
-import { Row } from 'antd';
-
 import DashboardPage from 'components/structural/DashboardPage';
-import Palette from 'components/ui/Palette';
 
 import './style.less';
 
-export interface ThemeProps {
+export interface ProfileProps {
 	// Empty
 }
 
@@ -15,12 +13,12 @@ interface State {
 	loading: boolean;
 }
 
-class Theme extends React.Component<ThemeProps, State> {
+class Profile extends React.Component<ProfileProps, State> {
 	public state: State = {
 		loading: true
 	};
 
-	constructor(props: ThemeProps, context?: any) {
+	constructor(props: ProfileProps, context?: any) {
 		super(props, context);
 	}
 
@@ -38,14 +36,12 @@ class Theme extends React.Component<ThemeProps, State> {
 				useLoader={true}
 				spinning={this.state.loading}
 				antSpinner={true}
-				className={'Theme__Body'}
+				className={'Profile__Body'}
 			>
-				<Row gutter={24}>
-					<Palette />
-				</Row>
+				<Card style={{ height: 'calc(100vh - 110px)' }} />
 			</DashboardPage>
 		);
 	}
 }
 
-export default Theme;
+export default Profile;

@@ -1,12 +1,11 @@
+import { Card } from 'antd';
 import * as React from 'react';
-
-import { Calendar as AntCalendar } from 'antd';
 
 import DashboardPage from 'components/structural/DashboardPage';
 
 import './style.less';
 
-export interface CalendarProps {
+export interface ChatProps {
 	// Empty
 }
 
@@ -14,12 +13,12 @@ interface State {
 	loading: boolean;
 }
 
-class Calendar extends React.Component<CalendarProps, State> {
+class Chat extends React.Component<ChatProps, State> {
 	public state: State = {
 		loading: true
 	};
 
-	constructor(props: CalendarProps, context?: any) {
+	constructor(props: ChatProps, context?: any) {
 		super(props, context);
 	}
 
@@ -37,12 +36,12 @@ class Calendar extends React.Component<CalendarProps, State> {
 				useLoader={true}
 				spinning={this.state.loading}
 				antSpinner={true}
-				className={'Calendar__Body'}
+				className={'Chat__Body'}
 			>
-				<AntCalendar />
+				<Card style={{ height: 'calc(100vh - 110px)' }} />
 			</DashboardPage>
 		);
 	}
 }
 
-export default Calendar;
+export default Chat;

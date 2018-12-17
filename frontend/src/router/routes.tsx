@@ -108,62 +108,42 @@ export const DashboardRoute: AdvRoute = {
 };
 routes[DashboardRoute.name] = DashboardRoute;
 
-export const DashboardCalendarRoute: AdvRoute = {
-	name: RouteNames.DASHBOARD_CALENDAR,
-	path: '/dashboard/calendar',
+export const DashboardChatRoute: AdvRoute = {
+	name: RouteNames.DASHBOARD_CHAT,
+	path: '/dashboard/chat',
 
 	link: () => ({
-		name: DashboardCalendarRoute.name
+		name: DashboardChatRoute.name
 	}),
 
 	component: () => <Dashboard />,
 
 	activate: action((store: RouterStore) => {
-		store.activatedRouteName(DashboardCalendarRoute.name);
+		store.activatedRouteName(DashboardChatRoute.name);
 	}),
 
 	deactivate: (store: RouterStore) => {
-		store.deActivatedRouteName(DashboardCalendarRoute.name);
+		store.deActivatedRouteName(DashboardChatRoute.name);
 	}
 };
-routes[DashboardCalendarRoute.name] = DashboardCalendarRoute;
+routes[DashboardChatRoute.name] = DashboardChatRoute;
 
-export const DashboardOverviewRoute: AdvRoute = {
-	name: RouteNames.DASHBOARD_OVERVIEW,
-	path: '/dashboard/overview',
+export const DashboardProfileRoute: AdvRoute = {
+	name: RouteNames.DASHBOARD_PROFILE,
+	path: '/dashboard/profile',
 
 	link: () => ({
-		name: DashboardOverviewRoute.name
+		name: DashboardProfileRoute.name
 	}),
 
 	component: () => <Dashboard />,
 
 	activate: action((store: RouterStore) => {
-		store.activatedRouteName(DashboardOverviewRoute.name);
+		store.activatedRouteName(DashboardProfileRoute.name);
 	}),
 
 	deactivate: (store: RouterStore) => {
-		store.deActivatedRouteName(DashboardOverviewRoute.name);
+		store.deActivatedRouteName(DashboardProfileRoute.name);
 	}
 };
-routes[DashboardOverviewRoute.name] = DashboardOverviewRoute;
-
-export const DashboardThemeRoute: AdvRoute = {
-	name: RouteNames.DASHBOARD_THEME,
-	path: '/dashboard/theme',
-
-	link: () => ({
-		name: DashboardThemeRoute.name
-	}),
-
-	component: () => <Dashboard />,
-
-	activate: action((store: RouterStore) => {
-		store.activatedRouteName(DashboardThemeRoute.name);
-	}),
-
-	deactivate: (store: RouterStore) => {
-		store.deActivatedRouteName(DashboardThemeRoute.name);
-	}
-};
-routes[DashboardThemeRoute.name] = DashboardThemeRoute;
+routes[DashboardProfileRoute.name] = DashboardProfileRoute;

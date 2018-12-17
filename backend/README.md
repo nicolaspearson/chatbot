@@ -1,6 +1,6 @@
 # Chatbot Backend
 
-This project contains various microservices, that
+This project contains various microservices, that comprises the backend system.
 
 ## Getting started
 
@@ -25,7 +25,7 @@ To add a new microservice:
 4. You should now be able to use `npm start` from your microservices' directory.
 5. Once you are done with development:
    1. Add an entry for the new microservice to the `docker-compose.yml` file.
-   2. Add a route for your service to the `envoy/envoy.yaml` file.
+   2. Add a route for your service to the `../envoy/backend/envoy.yaml` file.
 
 ## Project structure
 
@@ -33,12 +33,7 @@ The project is divided into various microservices. A microservice in this archit
 
 ## Infrastructure
 
-- **Envoy** - An edge and service proxy that wraps all of the microservices. This is the central entrypoint into the application for external consumers.
 - **Chatbot DB** - This database is used by all of the microservices that need to access a central database. Each microservice must use it's own database schema.
-
-### Envoy
-
-Envoy is an L7 proxy and communication bus designed for large modern service oriented architectures.
 
 ### Chatbot DB
 

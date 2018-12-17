@@ -8,9 +8,8 @@ import Logo from 'components/icon/Logo';
 import Head from 'components/structural/Head';
 import Page from 'components/structural/Page';
 import { RouteNames } from 'enums/RouteNames';
-import Calendar from 'pages/Dashboard/Calendar';
-import Overview from 'pages/Dashboard/Overview';
-import Theme from 'pages/Dashboard/Theme';
+import Chat from 'pages/Dashboard/Chat';
+import Profile from 'pages/Dashboard/Profile';
 import { RouterStore } from 'store/RouterStore';
 
 import Logger from 'logger';
@@ -96,16 +95,12 @@ class DashboardLayout extends React.Component<DashboardLayoutProps, State> {
 	private getActiveMenuKey = (activeRouteName: string): string => {
 		let activeKey = '1';
 		switch (activeRouteName) {
-			case RouteNames.DASHBOARD_OVERVIEW:
+			case RouteNames.DASHBOARD_CHAT:
 				activeKey = '1';
 				break;
 
-			case RouteNames.DASHBOARD_CALENDAR:
+			case RouteNames.DASHBOARD_PROFILE:
 				activeKey = '2';
-				break;
-
-			case RouteNames.DASHBOARD_THEME:
-				activeKey = '3';
 				break;
 		}
 		return activeKey;
@@ -116,9 +111,9 @@ class DashboardLayout extends React.Component<DashboardLayoutProps, State> {
 		menuItems.push(
 			<Menu.Item key="1">
 				<div onClick={this.handleMenuItemClick}>
-					<RouterLink style={{ width: '100%' }} routeName={RouteNames.DASHBOARD_OVERVIEW}>
-						<Icon type="dashboard" />
-						<span>Dashboard</span>
+					<RouterLink style={{ width: '100%' }} routeName={RouteNames.DASHBOARD_CHAT}>
+						<Icon type="message" />
+						<span>Chat</span>
 					</RouterLink>
 				</div>
 			</Menu.Item>
@@ -126,19 +121,9 @@ class DashboardLayout extends React.Component<DashboardLayoutProps, State> {
 		menuItems.push(
 			<Menu.Item key="2">
 				<div onClick={this.handleMenuItemClick}>
-					<RouterLink style={{ width: '100%' }} routeName={RouteNames.DASHBOARD_CALENDAR}>
-						<Icon type="calendar" />
-						<span>Calendar</span>
-					</RouterLink>
-				</div>
-			</Menu.Item>
-		);
-		menuItems.push(
-			<Menu.Item key="3">
-				<div onClick={this.handleMenuItemClick}>
-					<RouterLink style={{ width: '100%' }} routeName={RouteNames.DASHBOARD_THEME}>
-						<Icon type="sliders" />
-						<span>Theme</span>
+					<RouterLink style={{ width: '100%' }} routeName={RouteNames.DASHBOARD_PROFILE}>
+						<Icon type="user" />
+						<span>Profile</span>
 					</RouterLink>
 				</div>
 			</Menu.Item>
@@ -148,20 +133,20 @@ class DashboardLayout extends React.Component<DashboardLayoutProps, State> {
 
 	private renderDashboardPage = (activeRouteName: string): JSX.Element => {
 		switch (activeRouteName) {
-			case RouteNames.DASHBOARD_CALENDAR:
-				return <Calendar />;
+			case RouteNames.DASHBOARD_CHAT:
+			default:
+				return <Chat />;
 
-			case RouteNames.DASHBOARD_THEME:
-				return <Theme />;
+			case RouteNames.DASHBOARD_PROFILE:
+				return <Profile />;
 		}
-		return <Overview />;
 	};
 
 	public render() {
 		const activeRouteName =
 			this.props.routerStore && this.props.routerStore.activeRouteName
 				? this.props.routerStore.activeRouteName
-				: RouteNames.DASHBOARD_OVERVIEW;
+				: RouteNames.DASHBOARD_CHAT;
 		return (
 			<Page useLoader={true} spinning={this.state.loading}>
 				<Head>
