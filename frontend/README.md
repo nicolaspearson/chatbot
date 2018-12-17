@@ -1,6 +1,6 @@
 # Chatbot Frontend
 
-React Chatbot built using Typescript, MobX, Ant Design, and FuseBox.
+This is the React frontend for the Chatbot app, it was built using Typescript, MobX, Ant Design, and FuseBox.
 
 This project uses a custom MobX router implemented from this great example [hacker-routing-mobx-router5](https://github.com/eugenkiss/hacker-routing-mobx-router5)
 
@@ -86,15 +86,15 @@ The dependency list below is not exhaustive, it is simply used to highlight the 
 
 ### Runtime
 
-- [Ant Design 3.10.9](https://ant.design/)
-- [MobX 5.6.0](https://mobx.js.org)
+- [Ant Design 3.11.2](https://ant.design/)
+- [MobX 5.8.0](https://mobx.js.org)
 - [React 16.6.3](https://facebook.github.io/react/)
-- [Router5 6.6.2](https://router5.js.org/)
+- [Router5 6.6.3](https://router5.js.org/)
 
 ### Build time
 
 - [FuseBox 3.6.0](https://fuse-box.org)
-- [Less 3.8.1](http://lesscss.org/)
+- [Less 3.9.0](http://lesscss.org/)
 - [Typescript 3.2.2](https://www.typescriptlang.org/)
 
 ### Contribution guidelines
