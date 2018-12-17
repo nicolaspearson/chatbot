@@ -55,7 +55,7 @@ chatbot-db
 - **Auth Service** - The Auth Service is responsible for authorizing users and validating JWT tokens.
 - **Template Service** - Use this as a quick start for creating a new microservice.
 
-### Auth Service
+### Auth Service (Node)
 
 The Auth Service is responsible for authorizing users and validating JWT tokens.
 
@@ -128,7 +128,7 @@ src
     └── system.utils.ts
 ```
 
-### Template Service
+### Template Service (Node)
 
 This is a template for creating new services. Simply copy and paste the root directory, rename the folder, and customise as required.
 
