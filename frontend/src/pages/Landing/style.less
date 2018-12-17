@@ -9,6 +9,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		height: calc(100vh - 164px);
 		width: 100%;
 		padding: 40px;
 		background: @landing-background;
@@ -66,74 +67,6 @@
 			}
 		}
 	}
-
-	.Why__Layout {
-		display: flex;
-		flex: 1;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-
-		.Text__Wrapper {
-			width: 50%;
-			min-height: 336px;
-			background: @secondary-color;
-			padding: 40px;
-
-			h1 {
-				font-size: 36px;
-				font-weight: 500;
-				line-height: 60px;
-				margin: 8px 0 10px;
-				color: @color-font-light;
-			}
-
-			p {
-				font-size: 16px;
-				line-height: 32px;
-				font-weight: 400;
-				max-width: 80%;
-				color: @color-font-light;
-			}
-
-			.Text__Wrapper__Buttons {
-				.ant-btn-ghost {
-					color: @color-font-light;
-				}
-				.Button {
-					min-width: 120px;
-					margin-right: 20px;
-				}
-			}
-		}
-
-		.Text__Wrapper__Alt {
-			background: @primary-color;
-		}
-
-		.Image__Wrapper {
-			width: 50%;
-			min-height: 336px;
-			padding: 40px;
-			display: flex;
-			flex: 1;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			background: @landing-background;
-
-			.ReactOfficial__Main {
-				height: 235px;
-				margin: 8px;
-			}
-
-			.AntDesign__Main {
-				height: 180px;
-				margin: 8px;
-			}
-		}
-	}
 }
 
 @media screen and (max-width: 560px) {
@@ -150,7 +83,6 @@
 			.Plus__Main {
 				height: 35px;
 				margin: 8px;
-				color: @secondary-color;
 			}
 
 			.AntDesign__Main {
@@ -168,10 +100,6 @@
 			display: none !important;
 		}
 
-		.ShowFlexAtMd {
-			display: flex !important;
-		}
-
 		.Top__Layout {
 			.Text__Wrapper {
 				width: 100%;
@@ -187,30 +115,6 @@
 					font-size: 16px;
 					line-height: 36px;
 				}
-			}
-		}
-
-		.Why__Layout {
-			flex-direction: column;
-
-			.Text__Wrapper {
-				width: 100%;
-
-				h1 {
-					font-size: 36px;
-					line-height: 60px;
-					margin: 8px;
-				}
-
-				p {
-					font-size: 16px;
-					line-height: 32px;
-					max-width: 100%;
-				}
-			}
-
-			.Image__Wrapper {
-				width: 100%;
 			}
 		}
 	}
