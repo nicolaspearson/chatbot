@@ -54,11 +54,8 @@ src
 │   │   ├── Page
 │   │   └── SiteNav
 │   └── ui
-│       ├── ContactUsForm
-│       ├── EarlyAccessButton
 │       ├── NumberCard
 │       ├── Palette
-│       ├── Recaptcha
 │       └── RoundButton
 ├── containers
 │   ├── App

@@ -35,8 +35,6 @@ export class Main extends React.Component {
 			<Provider
 				store={this.store}
 				authStore={this.store.authStore}
-				contactUsStore={this.store.contactUsStore}
-				earlyAccessStore={this.store.earlyAccessStore}
 				flagStore={this.store.flagStore}
 				routerStore={this.store.routerStore}
 			>

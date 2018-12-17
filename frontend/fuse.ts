@@ -139,6 +139,7 @@ function getConfig() {
 		plugins,
 		alias: {
 			app: `~`,
+			api: '~/api',
 			assets: '~/assets',
 			components: '~/components',
 			containers: '~/containers',
@@ -147,6 +148,7 @@ function getConfig() {
 			logger: '~/logger',
 			models: '~/models',
 			pages: '~/pages',
+			proto: '~/proto',
 			router: '~/router',
 			store: '~/store',
 			theme: '~/theme',

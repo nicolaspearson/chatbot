@@ -58,7 +58,6 @@ chatbot-db
 ## Microservices
 
 - **Auth Service** - The Auth Service is responsible for authorizing users and validating JWT tokens.
-- **Registration Service** - The Registration Service is responsible for performing registration related tasks, e.g. early access sign-up, contact us form submission, etc.
 - **Template Service** - Use this as a quick start for creating a new microservice.
 
 ### Auth Service

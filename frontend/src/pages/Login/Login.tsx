@@ -57,7 +57,7 @@ class Login extends React.Component<AllProps> {
 					password: values.password
 				};
 				this.loginSubmitted = true;
-				await this.props.authStore.authLoginRequest(authLogin);
+				await this.props.authStore.loginRequest(authLogin);
 			}
 		});
 	};

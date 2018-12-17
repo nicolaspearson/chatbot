@@ -64,7 +64,7 @@ class SignUp extends React.Component<AllProps> {
 					user
 				};
 				this.signUpSubmitted = true;
-				await this.props.authStore.authSignUpRequest(authSignUp);
+				await this.props.authStore.signUpRequest(authSignUp);
 			}
 		});
 	};
