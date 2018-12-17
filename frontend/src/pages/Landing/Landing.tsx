@@ -2,9 +2,7 @@ import { Button } from 'antd';
 import { observer } from 'mobx-react';
 import * as React from 'react';
 
-import AntDesign from 'components/icon/AntDesign';
-import Plus from 'components/icon/Plus';
-import ReactOfficial from 'components/icon/ReactOfficial';
+import Chatbot from 'components/icon/Chatbot';
 import Head from 'components/structural/Head';
 import Header from 'components/structural/Header';
 import Page from 'components/structural/Page';
@@ -46,11 +44,9 @@ class Landing extends React.Component<LandingProps, State> {
 							</section>
 						</section>
 						<section className="Image__Wrapper HiddenAtMd">
-							<ReactOfficial />
-							<span className="Landing__Plus">
-								<Plus />
+							<span className="Landing__Chatbot">
+								<Chatbot />
 							</span>
-							<AntDesign />
 						</section>
 					</section>
 				</section>

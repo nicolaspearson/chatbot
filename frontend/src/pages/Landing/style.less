@@ -9,7 +9,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		height: calc(100vh - 164px);
+		height: calc(100vh - 250px);
 		width: 100%;
 		padding: 40px;
 		background: @landing-background;
@@ -20,10 +20,10 @@
 			min-width: 420px;
 
 			h1 {
-				font-size: 68px;
+				font-size: 48px;
 				font-weight: 600;
 				line-height: 76px;
-				margin: 8px 0 28px;
+				margin: 8px 0 18px;
 				color: @secondary-color;
 			}
 
@@ -42,28 +42,15 @@
 		}
 
 		.Image__Wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 46%;
 			max-width: 482px;
 
-			.ReactOfficial__Main {
-				height: 185px;
-				margin: 8px;
-				padding-right: 15px;
-			}
-
-			.Landing__Plus {
-				color: @secondary-color;
-			}
-
-			.Plus__Main {
-				height: 35px;
-				margin: 8px;
-			}
-
-			.AntDesign__Main {
-				height: 140px;
-				margin: 8px;
-				padding-left: 30px;
+			.Landing__Chatbot {
+				color: @color-chatbot;
+				padding: 30px;
 			}
 		}
 	}
@@ -73,23 +60,6 @@
 	.Landing__Main {
 		.Top__Layout {
 			flex-direction: column;
-
-			.ReactOfficial__Main {
-				height: 125px;
-				margin: 8px;
-				padding-right: 0px;
-			}
-
-			.Plus__Main {
-				height: 35px;
-				margin: 8px;
-			}
-
-			.AntDesign__Main {
-				height: 100px;
-				margin: 8px;
-				padding-left: 0px;
-			}
 		}
 	}
 }
@@ -107,7 +77,7 @@
 				min-width: auto;
 
 				h1 {
-					font-size: 48px;
+					font-size: 32px;
 					line-height: 56px;
 				}
 
