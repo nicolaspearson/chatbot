@@ -1,6 +1,6 @@
 # Chatbot Backend
 
-This project contains various microservices, that comprises the backend system.
+This project contains various microservices, that together comprise the backend system.
 
 ## Getting started
 
@@ -89,10 +89,11 @@ The configuration hierarchy being used:
 src
 ├── actions
 │   ├── auth.actions.ts
+│   ├── echo.actions.ts
 │   └── index.ts
-├── app
-│   └── database.app.ts
-├── environments
+├── db
+│   └── app.db.ts
+├── env
 │   ├── config.default.json
 │   ├── config.development.json
 │   ├── config.production.json
@@ -119,9 +120,11 @@ src
 ├── services
 │   └── user.service.ts
 ├── types
-│   ├── ...
+│   └──  ...
 └── utils
     ├── auth.utils.ts
+    ├── grpc.utils.ts
+    ├── proto.utils.ts
     └── system.utils.ts
 ```
 
@@ -156,11 +159,11 @@ The configuration hierarchy being used:
 ```
 src
 ├── actions
-│   ├── template.actions.ts
+│   ├── echo.actions.ts
 │   └── index.ts
-├── app
-│   └── database.app.ts
-├── environments
+├── db
+│   └── app.db.ts
+├── env
 │   ├── config.default.json
 │   ├── config.development.json
 │   ├── config.production.json
@@ -177,8 +180,9 @@ src
 │   ├── template_pb.d.ts
 │   └── template_pb.js
 ├── types
-│   ├── ...
+│   └──  ...
 └── utils
+    ├── grpc.utils.ts
     └── system.utils.ts
 ```
 
@@ -209,4 +213,4 @@ Run the following command to generate the proto messages and the service client 
 $ auth-service/proto-gen.sh
 ```
 
-See the README of microservice for testing details
+_See the README of each microservice for testing details_
